@@ -1,0 +1,16 @@
+.pei-wrap h2 { margin-top: 2em; }
+.pei-muted { color: #646970; font-weight: normal; }
+.pei-ok { color: #008a20; font-weight: 600; }
+.pei-warn { color: #b26200; font-weight: 600; }
+.pei-bad { color: #d63638; font-weight: 600; }
+.pei-note { background: #fff8e5; border-left: 4px solid #dba617; padding: 10px 12px; max-width: 900px; }
+.pei-table td { vertical-align: top; }
+.pei-table summary { cursor: pointer; }
+.pei-item { margin: 6px 0 6px 18px; }
+.pei-posts { margin: 6px 0 10px 22px; list-style: disc; }
+.pei-posts li { margin: 2px 0; }
+.pei-type-unknown td:first-child strong { color: #d63638; }
+.pei-row-zero { background: #fcf0f1 !important; }
+.pei-unused { columns: 2; max-width: 900px; }
+.pei-bar { width: 400px; max-width: 100%; height: 8px; background: #dcdcde; border-radius: 4px; overflow: hidden; }
+.pei-bar div { height: 100%; width: 0; background: #2271b1; transition: width .2s; }
