@@ -1,7 +1,7 @@
 === Smart Plugin Inspector ===
 Requires at least: 5.8
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 
 Shows which plugin generates each element on your pages, so you can decide which plugins (especially Elementor add-ons) you really need.
@@ -33,6 +33,9 @@ Shows which plugin generates each element on your pages, so you can decide which
 * You can delete this plugin when you have finished the clean-up.
 
 == Changelog ==
+
+= 1.1.1 =
+* Fix: "Plugin could not be activated because it triggered a fatal error" (Cannot redeclare pei_uninstall()) when the old Plugin Element Inspector was still active. The plugin now shows a notice asking you to remove the old one instead.
 
 = 1.1.0 =
 * Renamed from "Plugin Element Inspector" to "Smart Plugin Inspector". The plugin folder is now smart-plugin-inspector and the report is under Tools > Smart Plugin Inspector.

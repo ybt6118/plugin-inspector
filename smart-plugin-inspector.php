@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Smart Plugin Inspector
  * Description:       Find out which plugin generates each element on your pages (Elementor widgets, shortcodes, Gutenberg blocks, scripts & styles) and which plugins are not used anywhere in your content.
- * Version:           1.1.0
+ * Version:           1.1.1
  * Author:            Uniczen
  * Requires at least: 5.8
  * Requires PHP:      7.4
@@ -34,7 +34,7 @@ if ( defined( 'PEI_VERSION' ) ) {
 	return;
 }
 
-define( 'PEI_VERSION', '1.1.0' );
+define( 'PEI_VERSION', '1.1.1' );
 define( 'PEI_FILE', __FILE__ );
 define( 'PEI_PATH', plugin_dir_path( __FILE__ ) );
 define( 'PEI_URL', plugin_dir_url( __FILE__ ) );
