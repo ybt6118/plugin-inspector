@@ -37,6 +37,7 @@ Shows which plugin generates each element on your pages, so you can decide which
 = 1.1.0 =
 * Renamed from "Plugin Element Inspector" to "Smart Plugin Inspector". The plugin folder is now smart-plugin-inspector and the report is under Tools > Smart Plugin Inspector.
 * Upgrading from Plugin Element Inspector: deactivate and delete the old plugin, then install and activate this one, and click "Scan site now" again. If the old plugin is still active, this one shows a notice and waits instead of causing an error.
+* New: Automatic updates. New versions published as GitHub releases show up on the Plugins screen with an "Update now" button.
 
 = 1.0.0 =
 * First release.

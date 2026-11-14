@@ -43,6 +43,17 @@ require_once PEI_PATH . 'includes/class-pei-resolver.php';
 require_once PEI_PATH . 'includes/class-pei-scanner.php';
 require_once PEI_PATH . 'includes/class-pei-admin.php';
 require_once PEI_PATH . 'includes/class-pei-frontend.php';
+require_once PEI_PATH . 'includes/class-pei-updater.php';
+
+/*
+ * Self-hosted updates from GitHub Releases: new versions show up on the
+ * Plugins screen with an "Update now" button. For a PRIVATE repository, also
+ * add  define( 'PEI_GITHUB_TOKEN', 'ghp_xxx' );  to wp-config.php.
+ */
+if ( ! defined( 'PEI_GITHUB_REPO' ) ) {
+	define( 'PEI_GITHUB_REPO', 'ybt6118/plugin-inspector' );
+}
+new PEI_Updater( __FILE__, PEI_GITHUB_REPO, defined( 'PEI_GITHUB_TOKEN' ) ? PEI_GITHUB_TOKEN : '' );
 
 add_action( 'plugins_loaded', array( 'PEI_Admin', 'init' ) );
 add_action( 'plugins_loaded', array( 'PEI_Frontend', 'init' ) );
