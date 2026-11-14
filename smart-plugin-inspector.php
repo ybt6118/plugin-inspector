@@ -59,6 +59,15 @@ add_action( 'plugins_loaded', array( 'PEI_Admin', 'init' ) );
 add_action( 'plugins_loaded', array( 'PEI_Frontend', 'init' ) );
 
 register_uninstall_hook( __FILE__, 'pei_uninstall' );
-function pei_uninstall() {
-	delete_option( 'pei_scan_results' );
+
+/*
+ * Declared inside a function_exists() check on purpose: PHP creates plain
+ * top-level functions before any code in this file runs, which would bypass
+ * the old-plugin check above and cause a "Cannot redeclare pei_uninstall()"
+ * fatal error while the old Plugin Element Inspector is still active.
+ */
+if ( ! function_exists( 'pei_uninstall' ) ) {
+	function pei_uninstall() {
+		delete_option( 'pei_scan_results' );
+	}
 }
